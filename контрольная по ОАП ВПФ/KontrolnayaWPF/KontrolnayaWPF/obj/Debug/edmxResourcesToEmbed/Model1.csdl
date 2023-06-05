@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Maslov_BaklanovModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="AnalyzesTable">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AnalysName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AnalysPrice" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <NavigationProperty Name="Main_Table" Relationship="Self.FK_Main_Table_AnalyzesTable" FromRole="AnalyzesTable" ToRole="Main_Table" />
+  </EntityType>
+  <EntityType Name="Main_Table">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idOrder" Type="Int32" Nullable="false" />
+    <Property Name="idAnalys" Type="Int32" Nullable="false" />
+    <Property Name="idService" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="AnalyzesTable" Relationship="Self.FK_Main_Table_AnalyzesTable" FromRole="Main_Table" ToRole="AnalyzesTable" />
+    <NavigationProperty Name="OrdersTable" Relationship="Self.FK_Main_Table_OrdersTable" FromRole="Main_Table" ToRole="OrdersTable" />
+    <NavigationProperty Name="ServicesTable" Relationship="Self.FK_Main_Table_ServicesTable" FromRole="Main_Table" ToRole="ServicesTable" />
+  </EntityType>
+  <EntityType Name="OrdersTable">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrderName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DocumentNumber" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="OrderDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="PatientName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DoctorName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Main_Table" Relationship="Self.FK_Main_Table_OrdersTable" FromRole="OrdersTable" ToRole="Main_Table" />
+  </EntityType>
+  <EntityType Name="ServicesTable">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ServiceName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ServicePrice" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <NavigationProperty Name="Main_Table" Relationship="Self.FK_Main_Table_ServicesTable" FromRole="ServicesTable" ToRole="Main_Table" />
+  </EntityType>
+  <Association Name="FK_Main_Table_AnalyzesTable">
+    <End Role="AnalyzesTable" Type="Self.AnalyzesTable" Multiplicity="1" />
+    <End Role="Main_Table" Type="Self.Main_Table" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AnalyzesTable">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Main_Table">
+        <PropertyRef Name="idAnalys" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Main_Table_OrdersTable">
+    <End Role="OrdersTable" Type="Self.OrdersTable" Multiplicity="1" />
+    <End Role="Main_Table" Type="Self.Main_Table" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OrdersTable">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Main_Table">
+        <PropertyRef Name="idOrder" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Main_Table_ServicesTable">
+    <End Role="ServicesTable" Type="Self.ServicesTable" Multiplicity="1" />
+    <End Role="Main_Table" Type="Self.Main_Table" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ServicesTable">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Main_Table">
+        <PropertyRef Name="idService" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Maslov_BaklanovEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AnalyzesTable" EntityType="Self.AnalyzesTable" />
+    <EntitySet Name="Main_Table" EntityType="Self.Main_Table" />
+    <EntitySet Name="OrdersTable" EntityType="Self.OrdersTable" />
+    <EntitySet Name="ServicesTable" EntityType="Self.ServicesTable" />
+    <AssociationSet Name="FK_Main_Table_AnalyzesTable" Association="Self.FK_Main_Table_AnalyzesTable">
+      <End Role="AnalyzesTable" EntitySet="AnalyzesTable" />
+      <End Role="Main_Table" EntitySet="Main_Table" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Main_Table_OrdersTable" Association="Self.FK_Main_Table_OrdersTable">
+      <End Role="OrdersTable" EntitySet="OrdersTable" />
+      <End Role="Main_Table" EntitySet="Main_Table" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Main_Table_ServicesTable" Association="Self.FK_Main_Table_ServicesTable">
+      <End Role="ServicesTable" EntitySet="ServicesTable" />
+      <End Role="Main_Table" EntitySet="Main_Table" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
