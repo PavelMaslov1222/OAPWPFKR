@@ -44,3 +44,26 @@ C:\Users\Houme-PC\OneDrive\Рабочий стол\контрольная по �
 C:\Users\Houme-PC\OneDrive\Рабочий стол\контрольная по ОАП ВПФ\KontrolnayaWPF\KontrolnayaWPF\obj\Debug\KontrolnayaWPF.csproj.CopyComplete
 C:\Users\Houme-PC\OneDrive\Рабочий стол\контрольная по ОАП ВПФ\KontrolnayaWPF\KontrolnayaWPF\obj\Debug\KontrolnayaWPF.exe
 C:\Users\Houme-PC\OneDrive\Рабочий стол\контрольная по ОАП ВПФ\KontrolnayaWPF\KontrolnayaWPF\obj\Debug\KontrolnayaWPF.pdb
+C:\Users\user\Downloads\OAPWPFKR-main\OAPWPFKR-main\контрольная по ОАП ВПФ\KontrolnayaWPF\KontrolnayaWPF\bin\Debug\KontrolnayaWPF.exe.config
+C:\Users\user\Downloads\OAPWPFKR-main\OAPWPFKR-main\контрольная по ОАП ВПФ\KontrolnayaWPF\KontrolnayaWPF\bin\Debug\KontrolnayaWPF.exe
+C:\Users\user\Downloads\OAPWPFKR-main\OAPWPFKR-main\контрольная по ОАП ВПФ\KontrolnayaWPF\KontrolnayaWPF\bin\Debug\KontrolnayaWPF.pdb
+C:\Users\user\Downloads\OAPWPFKR-main\OAPWPFKR-main\контрольная по ОАП ВПФ\KontrolnayaWPF\KontrolnayaWPF\bin\Debug\EntityFramework.dll
+C:\Users\user\Downloads\OAPWPFKR-main\OAPWPFKR-main\контрольная по ОАП ВПФ\KontrolnayaWPF\KontrolnayaWPF\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\user\Downloads\OAPWPFKR-main\OAPWPFKR-main\контрольная по ОАП ВПФ\KontrolnayaWPF\KontrolnayaWPF\bin\Debug\EntityFramework.xml
+C:\Users\user\Downloads\OAPWPFKR-main\OAPWPFKR-main\контрольная по ОАП ВПФ\KontrolnayaWPF\KontrolnayaWPF\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\user\Downloads\OAPWPFKR-main\OAPWPFKR-main\контрольная по ОАП ВПФ\KontrolnayaWPF\KontrolnayaWPF\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\user\Downloads\OAPWPFKR-main\OAPWPFKR-main\контрольная по ОАП ВПФ\KontrolnayaWPF\KontrolnayaWPF\obj\Debug\KontrolnayaWPF.csproj.AssemblyReference.cache
+C:\Users\user\Downloads\OAPWPFKR-main\OAPWPFKR-main\контрольная по ОАП ВПФ\KontrolnayaWPF\KontrolnayaWPF\obj\Debug\KontrolnayaWPF.csproj.SuggestedBindingRedirects.cache
+C:\Users\user\Downloads\OAPWPFKR-main\OAPWPFKR-main\контрольная по ОАП ВПФ\KontrolnayaWPF\KontrolnayaWPF\obj\Debug\MainWindow.g.cs
+C:\Users\user\Downloads\OAPWPFKR-main\OAPWPFKR-main\контрольная по ОАП ВПФ\KontrolnayaWPF\KontrolnayaWPF\obj\Debug\App.g.cs
+C:\Users\user\Downloads\OAPWPFKR-main\OAPWPFKR-main\контрольная по ОАП ВПФ\KontrolnayaWPF\KontrolnayaWPF\obj\Debug\KontrolnayaWPF_Content.g.cs
+C:\Users\user\Downloads\OAPWPFKR-main\OAPWPFKR-main\контрольная по ОАП ВПФ\KontrolnayaWPF\KontrolnayaWPF\obj\Debug\KontrolnayaWPF_MarkupCompile.cache
+C:\Users\user\Downloads\OAPWPFKR-main\OAPWPFKR-main\контрольная по ОАП ВПФ\KontrolnayaWPF\KontrolnayaWPF\obj\Debug\KontrolnayaWPF_MarkupCompile.lref
+C:\Users\user\Downloads\OAPWPFKR-main\OAPWPFKR-main\контрольная по ОАП ВПФ\KontrolnayaWPF\KontrolnayaWPF\obj\Debug\MainWindow.baml
+C:\Users\user\Downloads\OAPWPFKR-main\OAPWPFKR-main\контрольная по ОАП ВПФ\KontrolnayaWPF\KontrolnayaWPF\obj\Debug\KontrolnayaWPF.g.resources
+C:\Users\user\Downloads\OAPWPFKR-main\OAPWPFKR-main\контрольная по ОАП ВПФ\KontrolnayaWPF\KontrolnayaWPF\obj\Debug\KontrolnayaWPF.Properties.Resources.resources
+C:\Users\user\Downloads\OAPWPFKR-main\OAPWPFKR-main\контрольная по ОАП ВПФ\KontrolnayaWPF\KontrolnayaWPF\obj\Debug\KontrolnayaWPF.csproj.GenerateResource.cache
+C:\Users\user\Downloads\OAPWPFKR-main\OAPWPFKR-main\контрольная по ОАП ВПФ\KontrolnayaWPF\KontrolnayaWPF\obj\Debug\KontrolnayaWPF.csproj.CoreCompileInputs.cache
+C:\Users\user\Downloads\OAPWPFKR-main\OAPWPFKR-main\контрольная по ОАП ВПФ\KontrolnayaWPF\KontrolnayaWPF\obj\Debug\KontrolnayaWPF.csproj.CopyComplete
+C:\Users\user\Downloads\OAPWPFKR-main\OAPWPFKR-main\контрольная по ОАП ВПФ\KontrolnayaWPF\KontrolnayaWPF\obj\Debug\KontrolnayaWPF.exe
+C:\Users\user\Downloads\OAPWPFKR-main\OAPWPFKR-main\контрольная по ОАП ВПФ\KontrolnayaWPF\KontrolnayaWPF\obj\Debug\KontrolnayaWPF.pdb

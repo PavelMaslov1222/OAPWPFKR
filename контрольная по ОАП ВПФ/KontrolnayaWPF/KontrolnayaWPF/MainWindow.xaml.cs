@@ -22,6 +22,10 @@ namespace KontrolnayaWPF
     {
         public MainWindow()
         {
+            ResizeMode = ResizeMode.NoResize;
+
+            
+
             InitializeComponent();
         }
     }
