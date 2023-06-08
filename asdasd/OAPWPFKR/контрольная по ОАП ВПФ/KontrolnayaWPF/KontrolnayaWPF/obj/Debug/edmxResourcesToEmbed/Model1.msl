@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище Maslov_BaklanovModelContainer" CdmEntityContainer="Maslov_BaklanovEntities">
+    <EntitySetMapping Name="AnalyzesTable">
+      <EntityTypeMapping TypeName="Maslov_BaklanovModel.AnalyzesTable">
+        <MappingFragment StoreEntitySet="AnalyzesTable">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="AnalysName" ColumnName="AnalysName" />
+          <ScalarProperty Name="AnalysPrice" ColumnName="AnalysPrice" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Main_Table">
+      <EntityTypeMapping TypeName="Maslov_BaklanovModel.Main_Table">
+        <MappingFragment StoreEntitySet="Main_Table">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="idOrder" ColumnName="idOrder" />
+          <ScalarProperty Name="idAnalys" ColumnName="idAnalys" />
+          <ScalarProperty Name="idService" ColumnName="idService" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrdersTable">
+      <EntityTypeMapping TypeName="Maslov_BaklanovModel.OrdersTable">
+        <MappingFragment StoreEntitySet="OrdersTable">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="OrderName" ColumnName="OrderName" />
+          <ScalarProperty Name="DocumentNumber" ColumnName="DocumentNumber" />
+          <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+          <ScalarProperty Name="PatientName" ColumnName="PatientName" />
+          <ScalarProperty Name="DoctorName" ColumnName="DoctorName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ServicesTable">
+      <EntityTypeMapping TypeName="Maslov_BaklanovModel.ServicesTable">
+        <MappingFragment StoreEntitySet="ServicesTable">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ServiceName" ColumnName="ServiceName" />
+          <ScalarProperty Name="ServicePrice" ColumnName="ServicePrice" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b2f24f4e1a9d4551a3d3782a3d0226ba" Name="Diagram1">
+        <EntityTypeShape EntityType="Maslov_BaklanovModel.AnalyzesTable" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Maslov_BaklanovModel.Main_Table" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="Maslov_BaklanovModel.OrdersTable" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Maslov_BaklanovModel.ServicesTable" Width="1.5" PointX="0.75" PointY="8.375" IsExpanded="true" />
+        <AssociationConnector Association="Maslov_BaklanovModel.FK_Main_Table_AnalyzesTable" ManuallyRouted="false" />
+        <AssociationConnector Association="Maslov_BaklanovModel.FK_Main_Table_OrdersTable" ManuallyRouted="false" />
+        <AssociationConnector Association="Maslov_BaklanovModel.FK_Main_Table_ServicesTable" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

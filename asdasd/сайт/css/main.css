@@ -1,0 +1,7 @@
+.container{
+    margin: 0 auto;
+    max-width: 1180px;
+}
+.first-sec{
+    background: linear-gradient(#F4F4F4,#E9E9E9);
+}

@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище Maslov_BaklanovModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AnalyzesTable">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AnalysName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="AnalysPrice" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Main_Table">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idOrder" Type="int" Nullable="false" />
+    <Property Name="idAnalys" Type="int" Nullable="false" />
+    <Property Name="idService" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OrdersTable">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OrderName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="DocumentNumber" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="OrderDate" Type="date" Nullable="false" />
+    <Property Name="PatientName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="DoctorName" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ServicesTable">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ServiceName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ServicePrice" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Main_Table_AnalyzesTable">
+    <End Role="AnalyzesTable" Type="Self.AnalyzesTable" Multiplicity="1" />
+    <End Role="Main_Table" Type="Self.Main_Table" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AnalyzesTable">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Main_Table">
+        <PropertyRef Name="idAnalys" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Main_Table_OrdersTable">
+    <End Role="OrdersTable" Type="Self.OrdersTable" Multiplicity="1" />
+    <End Role="Main_Table" Type="Self.Main_Table" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OrdersTable">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Main_Table">
+        <PropertyRef Name="idOrder" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Main_Table_ServicesTable">
+    <End Role="ServicesTable" Type="Self.ServicesTable" Multiplicity="1" />
+    <End Role="Main_Table" Type="Self.Main_Table" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ServicesTable">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Main_Table">
+        <PropertyRef Name="idService" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Хранилище Maslov_BaklanovModelContainer">
+    <EntitySet Name="AnalyzesTable" EntityType="Self.AnalyzesTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Main_Table" EntityType="Self.Main_Table" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OrdersTable" EntityType="Self.OrdersTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ServicesTable" EntityType="Self.ServicesTable" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Main_Table_AnalyzesTable" Association="Self.FK_Main_Table_AnalyzesTable">
+      <End Role="AnalyzesTable" EntitySet="AnalyzesTable" />
+      <End Role="Main_Table" EntitySet="Main_Table" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Main_Table_OrdersTable" Association="Self.FK_Main_Table_OrdersTable">
+      <End Role="OrdersTable" EntitySet="OrdersTable" />
+      <End Role="Main_Table" EntitySet="Main_Table" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Main_Table_ServicesTable" Association="Self.FK_Main_Table_ServicesTable">
+      <End Role="ServicesTable" EntitySet="ServicesTable" />
+      <End Role="Main_Table" EntitySet="Main_Table" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

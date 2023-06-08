@@ -1,0 +1,67 @@
+﻿<Window x:Class="KontrolnayaWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KontrolnayaWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="800" Width="1280">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*">
+
+            </RowDefinition>
+            <RowDefinition Height="5*">
+
+            </RowDefinition>
+            <RowDefinition Height="4*">
+
+            </RowDefinition>
+            <RowDefinition Height="2*">
+
+            </RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*">
+
+            </ColumnDefinition>
+            <ColumnDefinition Width="7*">
+
+            </ColumnDefinition>
+            <ColumnDefinition Width="8*">
+
+            </ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Image Source="https://www.prikleem.ru/color_images/7_f779968acd0ac9355fbb8e8a0a995008.png"/>
+        <Rectangle Grid.Column="1" Grid.ColumnSpan="2" Margin="0" Fill="Green"/>
+        <TextBlock Text="ГОМОТЕСТ - медицинская лабаратория" Background="Green" Foreground="White" FontSize="36" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1" Grid.ColumnSpan="2"/>
+
+        <TextBox Text="Название операции" Name="TextBox_NameOparacii" GotFocus="TextBox_NameOparacii_GotFocus" TextAlignment="Center" Foreground="Green" FontSize="25" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" BorderBrush="Green" BorderThickness="0 0 0 3" Margin="20 20" VerticalAlignment="Top" Height="40"/>
+
+        <TextBlock VerticalAlignment="Top" Text="Номер документа:" Height="35" Grid.Row="1" Margin="20,77,200,0" Grid.ColumnSpan="2" FontSize="20" Foreground="Green" RenderTransformOrigin="0.282,0.582"/>
+        <TextBox VerticalAlignment="Top" Name="TextBoxNumberDocument" GotFocus="TextBoxNumberDocument_GotFocus" Text="Введите номер документа" Grid.Column="1" Grid.Row="1" Background="Transparent" Margin="175,77,247,0" Foreground="Black" FontWeight="Medium" Height="35" FontSize="18" BorderBrush="Green" BorderThickness="3 3 3 3" Grid.ColumnSpan="2" />
+
+        <TextBlock Text="Дата проведения:" VerticalAlignment="Top" Grid.Row="1" Margin="20,147,200,0" Grid.ColumnSpan="2" FontSize="20" Foreground="Green" RenderTransformOrigin="0.282,0.582"  />
+        <DatePicker  Grid.Column="1" Grid.Row="1"  VerticalAlignment="Top" Grid.ColumnSpan="2" Margin="175,143,247,0" Foreground="Black" FontSize="18" BorderBrush="Green" BorderThickness="3 3 3 3" Height="34" />
+
+        <TextBlock VerticalAlignment="Top" Text="Пациент:" Height="35" Grid.Row="1" Margin="20,207,200,0" Grid.ColumnSpan="2" FontSize="20" Foreground="Green" RenderTransformOrigin="0.282,0.582"/>
+        <TextBox Name="TextBoxFIO" GotFocus="TextBoxFIO_GotFocus" VerticalAlignment="Top" Text="Введите ваше ФИО" Grid.Column="1" Grid.Row="1" Background="Transparent" Margin="175,207,247,0" Foreground="Black" FontWeight="Medium" Height="35" FontSize="18" BorderBrush="Green" BorderThickness="3 3 3 3" Grid.ColumnSpan="2" />
+
+        <TextBlock VerticalAlignment="Top" Text="Ответственный:" Height="35" Grid.Row="1" Margin="20,270,200,0" Grid.ColumnSpan="2" FontSize="20" Foreground="Green" RenderTransformOrigin="0.282,0.582"/>
+        <TextBox Name="TextBoxFIODoctor" GotFocus="TextBoxFIODoctor_GotFocus" VerticalAlignment="Top" Text="Введите ваше ФИО" Grid.Column="1" Grid.Row="1" Background="Transparent" Margin="175,270,247,0" Foreground="Black" FontWeight="Medium" Height="35" FontSize="18" BorderBrush="Green" BorderThickness="3 3 3 3" Grid.ColumnSpan="2" />
+
+        <ComboBox x:Name="ComboBoxAnalyses" Grid.Column="1" Grid.Row="2" Height="40" Width="400" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,20,0,0"/>
+        <Button Content="Добавить" Click="AddAnalys" Grid.Column="1" Grid.Row="2"  Width="100" HorizontalAlignment="Right" Margin="0,20,10,201"  />
+        <DataGrid SelectionMode="Extended"  Name="AnalysesDG" Grid.Column="1"  Grid.Row="2" d:ItemsSource="{Binding}" Margin="0,84,10,58" RenderTransformOrigin="0.508,0.535"/>
+        <Button Content="Удалить" Click="RemoveRow" Grid.Column="1" Grid.Row="2"  Margin="450,211,10,10"/>
+
+        <ComboBox Grid.Column="2" Name="ComboBoxServices" Grid.Row="2" Height="40" Width="400" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,20,0,0"/>
+        <Button Content="Добавить" Name="BtnAddService" Click="BtnAddService_Click" Grid.Column="2" Grid.Row="2"  Width="100" HorizontalAlignment="Right" Margin="390,20,50,201"  />
+        <DataGrid Name="DataGridServices" Grid.Column="2" Grid.Row="2" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,84,10,58" RenderTransformOrigin="0.508,0.535"/>
+        <Button Content="Удалить" Name="BtnRemoveServices" Click="BtnRemoveServices_Click" Grid.Column="2" Grid.Row="2"   Margin="490,211,50,10"/>
+        <TextBlock FontSize="20"  Name="TextBlockTotalPriceService" Grid.Column="2" HorizontalAlignment="Left" Height="29" Margin="20,10,0,0" Grid.Row="3" TextWrapping="Wrap" Text="Сумма всех услуг: 0" VerticalAlignment="Top" Width="332"/>
+        <TextBlock FontSize="20"  Name="TextBlockTotalPriceAnalys" Grid.Column="2" HorizontalAlignment="Left" Height="29" Margin="20,44,0,0" Grid.Row="3" TextWrapping="Wrap" Text="Сумма всех анализов: 0" VerticalAlignment="Top" Width="332"/>
+        <TextBlock FontSize="20"  Name="TextBlockTotalPriceAll" Grid.Column="2" HorizontalAlignment="Left" Height="29" Margin="20,83,0,0" Grid.Row="3" TextWrapping="Wrap" Text="Сумма всего: 0" VerticalAlignment="Top" Width="380"/>
+    </Grid>
+</Window>
