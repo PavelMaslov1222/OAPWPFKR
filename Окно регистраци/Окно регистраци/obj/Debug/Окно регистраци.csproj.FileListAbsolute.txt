@@ -1,0 +1,16 @@
+C:\Users\Houme-PC\Source\Repos\Окно регистраци\Окно регистраци\bin\Debug\Окно регистраци.exe.config
+C:\Users\Houme-PC\Source\Repos\Окно регистраци\Окно регистраци\bin\Debug\Окно регистраци.exe
+C:\Users\Houme-PC\Source\Repos\Окно регистраци\Окно регистраци\bin\Debug\Окно регистраци.pdb
+C:\Users\Houme-PC\Source\Repos\Окно регистраци\Окно регистраци\obj\Debug\Окно регистраци.csproj.AssemblyReference.cache
+C:\Users\Houme-PC\Source\Repos\Окно регистраци\Окно регистраци\obj\Debug\Окно регистраци.csproj.SuggestedBindingRedirects.cache
+C:\Users\Houme-PC\Source\Repos\Окно регистраци\Окно регистраци\obj\Debug\MainWindow.g.cs
+C:\Users\Houme-PC\Source\Repos\Окно регистраци\Окно регистраци\obj\Debug\App.g.cs
+C:\Users\Houme-PC\Source\Repos\Окно регистраци\Окно регистраци\obj\Debug\Окно регистраци_MarkupCompile.cache
+C:\Users\Houme-PC\Source\Repos\Окно регистраци\Окно регистраци\obj\Debug\Окно регистраци_MarkupCompile.lref
+C:\Users\Houme-PC\Source\Repos\Окно регистраци\Окно регистраци\obj\Debug\MainWindow.baml
+C:\Users\Houme-PC\Source\Repos\Окно регистраци\Окно регистраци\obj\Debug\Окно регистраци.g.resources
+C:\Users\Houme-PC\Source\Repos\Окно регистраци\Окно регистраци\obj\Debug\Окно_регистраци.Properties.Resources.resources
+C:\Users\Houme-PC\Source\Repos\Окно регистраци\Окно регистраци\obj\Debug\Окно регистраци.csproj.GenerateResource.cache
+C:\Users\Houme-PC\Source\Repos\Окно регистраци\Окно регистраци\obj\Debug\Окно регистраци.csproj.CoreCompileInputs.cache
+C:\Users\Houme-PC\Source\Repos\Окно регистраци\Окно регистраци\obj\Debug\Окно регистраци.exe
+C:\Users\Houme-PC\Source\Repos\Окно регистраци\Окно регистраци\obj\Debug\Окно регистраци.pdb

@@ -1,0 +1,55 @@
+﻿<Window x:Class="Окно_регистраци.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Окно_регистраци"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition ></ColumnDefinition>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBlock  Text="Логин" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24"></TextBlock>
+            <TextBlock Text="Пароль" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24"></TextBlock>
+            <TextBlock Text="Повторите пароль" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24"></TextBlock>
+            <TextBlock Text="Подписка на новости" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24"></TextBlock>
+            <TextBlock Text="Email" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24"></TextBlock>
+            <TextBlock Text="Выбор языка" Grid.Column="0" Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24"></TextBlock>
+            <TextBox Name="TextBoxLogin"  GotFocus="TextBoxLogin_GotFocus" Text="Введите логин" BorderThickness="2" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="366"></TextBox>
+            <TextBox  IsInactiveSelectionHighlightEnabled="True" Name="TextBoxPassword" GotFocus="TextBoxPassword_GotFocus" Text="Введите пароль" BorderThickness="2" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="366"></TextBox>
+            <TextBox Name="TextBoxRepeatPassword" GotFocus="TextBoxRepeatPassword_GotFocus" Text="Повторите пароль" BorderThickness="2" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Width="366"></TextBox>
+            <CheckBox Name="NewsCheckBox" Content="Подписка на новости" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center"  VerticalAlignment="Center" Margin="81,28,310,17"/>
+            <TextBox Text="Email" Name="TextBoxEmail" BorderThickness="2" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" Width="366"></TextBox>
+            <ComboBox Name="LanguageComboBox" Grid.Column="1" HorizontalAlignment="Left" Margin="81,24,0,0" Grid.Row="5" VerticalAlignment="Top" Width="366">
+                <ComboBoxItem>
+                    <StackPanel>
+                        <TextBlock Text="Русский"></TextBlock>
+                    </StackPanel>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <StackPanel>
+                        <TextBlock Text="English"></TextBlock>
+                    </StackPanel>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <StackPanel>
+                        <TextBlock Text="Deutsch"></TextBlock>
+                    </StackPanel>
+                </ComboBoxItem>
+            </ComboBox>
+            <Button Name="ButtonOK" Click="ButtonOK_Click" Content="OK" Grid.ColumnSpan="2" Grid.Row="6" Width="400" Height="30"></Button>
+        </Grid>
+    </Grid>
+</Window>
